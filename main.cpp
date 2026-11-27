@@ -21,10 +21,8 @@ int main()
         read(courseGrade);
         computeSort(courseGrade);
         print(courseGrade);
-    } catch (const std::exception& e) {
-        std::print("error: {}\n", e.what());
-    } catch (...) {
-        std::print("Other error!\n");
+    }  catch (...) {
+        std::print("error!\n");
     }
 
     return 0;
