@@ -36,7 +36,15 @@ using std::domain_error;
 using std::invalid_argument;
 
 //顶层分解
-struct Grade; //类型声明
+struct Grade //类型定义
+{
+    string name;
+    double midterm;
+    double final;
+    vector<double> homework;
+    double total; //总成绩，该数据成员可声明，也可不用声明
+};
+
 using CourseGrade = vector<Grade>; //类型别名
 
 extern void read(CourseGrade& cg);
@@ -60,14 +68,6 @@ int main()
     return 0;
 }
 
-struct Grade //类型定义
-{
-    string name;
-    double midterm;
-    double final;
-    vector<double> homework;
-    double total; //总成绩，该数据成员可声明，也可不用声明
-};
 
 // 第二层分解，添加错误检测
 extern istream& operator>>(istream& is, Grade& g);
