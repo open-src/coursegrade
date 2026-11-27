@@ -6,17 +6,15 @@
 #include "read.h"
 
 #include <print>
-using std::print;
 #include <fstream>
-using std::ifstream;
 #include <sstream>
-using std::istringstream;
-
 #include <stdexcept>
+using std::istringstream;
+using std::ifstream;
+using std::print;
 using std::runtime_error;
 using std::domain_error;
 #include "readgrade.h"
-
 
 // 第二层分解，添加错误检测
 void read(CourseGrade& cg)
